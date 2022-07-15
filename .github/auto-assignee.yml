@@ -9,7 +9,7 @@ reviewers:
 
   groups:
     maintainers:
-      - milind0307
+      - trivedi-mi
 
 files:
   '.github/**/*':
