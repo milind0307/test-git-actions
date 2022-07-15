@@ -1,0 +1,11 @@
+area:
+  - 'bug'
+  - 'important'
+
+# Labels that can be applied to PRs with the /kind command
+kind:
+  - 'failing'
+  - 'cleanup'
+
+labelapplyaa:
+  - .github/**/*
