@@ -1,6 +1,6 @@
 name: Yaml lint run test on docker Sonos
 on:
-  push:
+  pull_request:
     branches:
       - main
 permissions: read-all
