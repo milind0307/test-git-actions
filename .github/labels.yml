@@ -11,3 +11,5 @@ kind:
 
 labelapplyaa:
   - .github/**/*
+automerge:
+  - .github/**/*
