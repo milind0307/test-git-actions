@@ -3,7 +3,7 @@ area:
   - 'found'
   - 'important'
   - 'not found'
-  - 'not mergingg'
+  - 'not merginggg'
 
 # Labels that can be applied to PRs with the /kind command
 kind:
