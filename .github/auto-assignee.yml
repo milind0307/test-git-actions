@@ -10,7 +10,6 @@ reviewers:
   groups:
     maintainers:
       - trivedi-mi
-      - joshi-pa
 
 files:
   '.github/**/*':
