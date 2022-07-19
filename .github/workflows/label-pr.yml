@@ -14,7 +14,7 @@ permissions:
    discussions: write
 
 jobs:
-  # Automatically labels PRs based on file globs in the change.
+  # Automatically labels PRs based on file globs in the change.#
   triage:
     runs-on: ubuntu-latest
     steps:
