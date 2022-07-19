@@ -5,20 +5,22 @@ name: "Auto Label PRs"
 # will trigger this process.
 
 on:
-  pull_request:
-    types: [opened,reopened,synchronize]
-# permissions:
-#    contents: read
-#    issues: write
-#    pull-requests: write
-#    discussions: write
+
+  pull_request_target:
+    #types: [opened,reopened,synchronize]
+permissions:
+   contents: read
+   issues: write
+   pull-requests: write
+   discussions: write
+
 
 jobs:
   # Automatically labels PRs based on file globs in the change.
   triage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@main
         with:
           repo-token: "${{ secrets.MY_TOKEN}}"
           #configuration-path: .github/labels.yml
