@@ -2,6 +2,9 @@
 area:
   - 'bug'
   - 'important'
+  
+kind:
+  - 'test'
 
 # # File globs for PR labeler
 # tests:
