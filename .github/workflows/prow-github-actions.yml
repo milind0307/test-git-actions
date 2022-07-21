@@ -17,4 +17,4 @@ jobs:
             /kind
             /cc
             /uncc"
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: "${{ secrets.MY_TOKEN }}"
