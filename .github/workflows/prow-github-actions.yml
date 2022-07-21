@@ -5,6 +5,7 @@ on:
 
 jobs:
   execute:
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - uses: jpmcb/prow-github-actions@v1
