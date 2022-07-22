@@ -1,0 +1,6 @@
+area:
+  - "bug"
+
+# Labels that can be applied to PRs with the /kind command ####
+kind:
+  - "failing"

@@ -1,0 +1,8 @@
+
+area:
+  - 'bug'
+  - 'important'
+
+
+tests:
+  - '**/*.test.ts'

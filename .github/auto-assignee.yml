@@ -1,0 +1,27 @@
+---
+# This assigns a PR to its author
+addAssignees: author
+
+reviewers:
+  # The default reviewers
+  defaults:
+    - maintainers
+
+  groups:
+    maintainers:
+      - milindtrivedisonos
+      - scottmcculloughsonos
+
+files:
+  '.github/**/*':
+    - maintainers
+
+
+options:
+  ignore_draft: true
+  ignored_keywords:
+    - WIP
+    - wip
+    - DO NOT MERGE
+  enable_group_assignment: false
+  number_of_reviewers: 1

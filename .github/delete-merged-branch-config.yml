@@ -1,0 +1,4 @@
+# https://probot.github.io/apps/delete-merged-branch/
+exclude:
+  - main
+  - develop

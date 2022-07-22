@@ -1,0 +1,37 @@
+name-template: 'v$RESOLVED_VERSION 🌈'
+tag-template: 'v$RESOLVED_VERSION'
+commitish: 'main'
+categories:
+  - title: 'Features 🚀'
+    label: 'feature'
+  - title: 'Bug Fixes 🐛'
+    label: 'fix'
+  - title: 'Maintenance 🧰'
+    label: 'maintenance'
+  - title: 'Release 🚢'
+    label: 'release'
+change-template: '- $TITLE (#$NUMBER, @$AUTHOR)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: patch
+template: |
+  ## Changelog since $PREVIOUS_TAG
+
+  ## Urgent Upgrade notes
+
+  <!--
+  Insert any deprications/urgent notes that should be pushed to the top.
+  -->
+
+  ## Changes by Type
+  
+  $CHANGES

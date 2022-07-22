@@ -1,0 +1,236 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", "docker:enableMajor"],
+  "kubernetes": {
+    "fileMatch": ["\\.yaml$"]
+  },
+  "regexManagers": [
+    {
+      "fileMatch": ["\\.yaml$"],
+      "matchStrings": [
+        "chart:\n *repository: .*?\n *name: (?<depName>.*?)\n *version: (?<currentValue>.*)\n",
+        "chart: .*?\/(?<depName>.*?)\n *version: (?<currentValue>.*)\n"
+      ],
+      "datasourceTemplate": "helm"
+    },
+    {
+      "fileMatch": ["\\.yaml$"],
+      "matchStrings": [
+        "chart:\n *git: git@github.com:(?<depName>.*?).git\n *ref: (?<currentValue>.*?)\n"
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": [
+        "\\.yaml$"
+      ],
+      "matchStrings": [
+        "image: (?<depName>.*?):(?<currentValue>.*)\n"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": ["\\.yaml$"],
+      "matchStrings": [
+        "veleroReleaseVersion: (?<currentValue>.*?)"
+      ],
+      "depNameTemplate": "velero",
+      "datasourceTemplate": "helm"
+    }
+  ],
+  "packageRules": [
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "ingress-nginx"
+      ],
+      "registryUrls": ["https://kubernetes.github.io/ingress-nginx"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "external-dns",
+        "postgresql",
+        "postgresql-ha"
+      ],
+      "registryUrls": ["https://charts.bitnami.com/bitnami"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "cluster-autoscaler"
+      ],
+      "registryUrls": ["https://kubernetes.github.io/autoscaler"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "cluster-overprovisioner"
+      ],
+      "registryUrls": ["https://charts.deliveryhero.io"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "metrics-server"
+      ],
+      "registryUrls": ["https://kubernetes-sigs.github.io/metrics-server/"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "dex"
+      ],
+      "registryUrls": ["https://charts.dexidp.io"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "cert-manager"
+      ],
+      "registryUrls": ["https://charts.jetstack.io"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "oauth2-proxy"
+      ],
+      "registryUrls": ["https://oauth2-proxy.github.io/manifests"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "kubernetes-external-secrets"
+      ],
+      "registryUrls": ["https://external-secrets.github.io/kubernetes-external-secrets"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "cost-analyzer"
+      ],
+      "registryUrls": ["https://kubecost.github.io/cost-analyzer"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "kyverno"
+      ],
+      "registryUrls": ["https://kyverno.github.io/kyverno/"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "kubernetes-dashboard"
+      ],
+      "registryUrls": ["https://kubernetes.github.io/dashboard"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "falco",
+        "falco-exporter"
+      ],
+      "registryUrls": ["https://falcosecurity.github.io/charts"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "crossplane"
+      ],
+      "registryUrls": ["https://charts.crossplane.io/stable"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "datadog"
+      ],
+      "registryUrls": ["https://helm.datadoghq.com"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "loki-stack"
+      ],
+      "registryUrls": ["https://grafana.github.io/helm-charts"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "node-problem-detector"
+      ],
+      "registryUrls": ["https://charts.deliveryhero.io"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "kube-prometheus-stack"
+      ],
+      "registryUrls": ["https://prometheus-community.github.io/helm-charts"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "thanos"
+      ],
+      "registryUrls": ["https://kubernetes-charts.banzaicloud.com"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "aws-node-termination-handler"
+      ],
+      "registryUrls": ["https://aws.github.io/eks-charts"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "descheduler"
+      ],
+      "registryUrls": ["https://kubernetes-sigs.github.io/descheduler"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "velero"
+      ],
+      "registryUrls": ["https://vmware-tanzu.github.io/helm-charts"]
+    },
+    {
+      "datasources": ["helm"],
+      "managers": ["regex"],
+      "packageNames": [
+        "harbor"
+      ],
+      "registryUrls": ["https://helm.goharbor.io"]
+    }
+  ],
+  "labels": ["dependencies", "maintenance", "renovatebot"],
+  "baseBranches": ["develop"],
+  "prHourlyLimit": 20,
+  "dependencyDashboard": true,
+  "rebaseLabel": "needs-rebase",
+  "postUpdateOptions": ["gomodTidy"]
+}
