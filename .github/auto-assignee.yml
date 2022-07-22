@@ -13,7 +13,7 @@ reviewers:
       - scottmcculloughsonos
 
 files:
-  '.github/**/*':
+  '**/*':
     - maintainers
 
 
