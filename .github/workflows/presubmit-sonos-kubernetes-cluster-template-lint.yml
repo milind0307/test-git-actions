@@ -1,0 +1,32 @@
+
+## Templates a cluster configs given checked in constraints and helmfile lints each
+
+name: presubmit-sonos-kubernetes-cluster-template-lint
+on:
+  pull_request:
+    branches:
+      - test-mili
+permissions: read-all
+jobs:
+  Template-Lint-Test:
+    name: Test for template lint
+    runs-on: [self-hosted, basic] 
+    steps:
+    - name: Checkout the base repo
+      uses: actions/checkout@v3
+
+    - name: Checkout Config Repository
+      uses: actions/checkout@v3
+      with:
+        repository: Sonos-Inc/pdsw-devops-kubernetes-config
+        path: pdsw-devops-kubernetes-config
+        ref: main
+        token: ${{ secrets.SONOS_GITHUB_ACTIONS_TOKEN }}
+
+    - name: Run Tests
+      run: |
+        ./tests/test-cluster-template-lint.sh
+      shell: bash
+      env:
+        CONFIG_REPO_PATH: /home/build/_work/pdsw-engx-devops-kubernetes/pdsw-engx-devops-kubernetes/pdsw-devops-kubernetes-config
+        DEBUG: "true"

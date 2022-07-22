@@ -1,0 +1,26 @@
+## Builds and deploys our helm charts to a kind cluster (https://kind.sigs.k8s.io/)
+
+name: presubmit-sonos-kubernetes-kind
+on:
+  pull_request:
+    branches:
+      - test-mili
+permissions: read-all
+jobs:
+  kubernetes-kind:
+    name: Kubernetes kind tests
+    runs-on: [self-hosted, basic]
+    steps:
+                   
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+
+          token: ${{ secrets.SONOS_GITHUB_ACTIONS_TOKEN }}
+
+      - name: Run Tests after checkout
+        run: |
+          tests/kind-bootstrap.sh tests/test-kind.sh
+        shell: bash
+        env:
+          CONFIG_REPO_PATH: ./tests/kind-test-cluster-config

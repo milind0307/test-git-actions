@@ -1,0 +1,29 @@
+##Deploys the upstream helmfiles then upgrades to the current changes in a kind cluster
+
+name: presubmit-sonos-kubernetes-helmfile-diff
+on:
+  push:
+    branches:
+      - test-push-act
+#permissions: read-all
+jobs:
+  Test:
+    name: Run tests
+    runs-on: [self-hosted, basic]  
+    
+    steps:
+      - name: Run tests helm diff
+        uses: actions/checkout@v3
+        with:
+
+          token: ${{ secrets.SONOS_GITHUB_ACTIONS_TOKEN }}
+
+      - name: After checkout
+        
+        run: | 
+             tests/kind-bootstrap.sh tests/test-kind-diff.sh
+        shell: bash
+        env:
+          CONFIG_REPO_PATH: tests/kind-test-cluster-config
+          DEBUG: "true"
+    

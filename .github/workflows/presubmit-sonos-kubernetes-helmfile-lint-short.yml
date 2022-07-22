@@ -1,0 +1,38 @@
+## Runs a short helmfile lint
+
+name: sonos-kubernetes-helmfile-lint-short
+on:
+  pull_request:
+    branches:
+      - test-mili
+permissions: read-all
+jobs:
+  
+
+  Helmfile-Lint:
+    name: Hemfile lint test
+    runs-on: [self-hosted, basic] 
+    steps:
+     
+       - name: Checkout on Repository
+         uses: actions/checkout@v3 
+         with:
+          token: ${{ secrets.SONOS_GITHUB_ACTIONS_TOKEN }}
+
+       - name: Run tests after checkout
+         run: |
+          ./tests/test-helmfile-lint.sh
+         env:
+            CONFIG_REPO_PATH: ./tests/kind-test-cluster-config
+         shell: bash
+    
+
+
+
+
+          
+
+      
+            
+        
+          

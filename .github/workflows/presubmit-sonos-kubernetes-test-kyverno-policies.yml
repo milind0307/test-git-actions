@@ -1,0 +1,21 @@
+## Test kyverno policies
+
+name: presubmit-sonos-kubernetes-test-kyverno-policies
+on:
+  pull_request:
+    branches:
+      - test-mili
+permissions: read-all
+jobs:
+  kyverno-policies:
+    name: Kyverno-policies Run tests
+    runs-on: [self-hosted, basic]
+    steps:
+                   
+      - name: Checkout on repository
+        uses: actions/checkout@v3
+
+      - name: After checkout run tests
+        run: |
+          tests/test-kyverno-policies.sh
+        shell: bash

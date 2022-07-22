@@ -1,0 +1,25 @@
+## Runs yaml lint on the prow config, tiers and environments
+
+name: Yaml lint run test on docker Sonos
+on:
+  pull_request:
+    branches:
+      - test-mili
+permissions: read-all
+jobs:
+  Yaml-Lint:
+    name: Run tests yaml lint
+    runs-on: [self-hosted, basic]
+    steps:
+
+    - name: Install yaml lint
+      run: |
+        sudo apt-get install yamllint -y
+      shell: bash
+
+    - uses: actions/checkout@v3
+    - name: Checkout repo and run tests
+      run: |
+            yamllint -c tools/.yamllint.conf .prow cluster/tiers tests/kind-test-cluster-config
+        
+          

@@ -1,0 +1,23 @@
+##presubmit-sonos-kubernetes-configmerger
+
+name: presubmit-sonos-kubernetes-configmerger
+on:
+  pull_request:
+    branches:
+      - test-mili
+permissions: read-all
+jobs:
+  Config-Merger:
+    name: Merge config
+    runs-on: [self-hosted, basic]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Test after Checkout
+        run: |
+          ./tools/configmerger.sh $CLUSTER_NAME
+        shell: bash
+        env:
+          CONFIG_REPO_PATH: ./tests/kind-test-cluster-config
+          CLUSTER_NAME : kind-test 
