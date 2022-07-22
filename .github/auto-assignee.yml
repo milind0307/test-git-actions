@@ -10,7 +10,8 @@ reviewers:
   groups:
     maintainers:
       - milindtrivedisonos
-      - scottmcculloughsonos
+      - trivedi-mi
+      - joshi-pa
 
 files:
   '**/*':
