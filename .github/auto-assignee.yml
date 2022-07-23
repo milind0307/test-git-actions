@@ -10,6 +10,7 @@ reviewers:
   groups:
     maintainers:
       - trivedi-mi
+      - trivedi-1995
      
 
 files:
@@ -24,4 +25,4 @@ options:
     - wip
     - DO NOT MERGE
   enable_group_assignment: false
-  number_of_reviewers: 1
+  number_of_reviewers: 2
