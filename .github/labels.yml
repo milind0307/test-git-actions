@@ -6,3 +6,8 @@ area:
 
 In Progress:
   - '**/*'
+  
+kind:
+  - "failing"
+  - "feature"
+  - "dependencies"
