@@ -1,5 +1,5 @@
 feature: ['feature/*', 'feat/*']
 fix: 'fix/*'
 maintenance: 'maintain/*'
-In progress: ['feature/*', 'feat/*','fix/*,'maintain/*']
+In progress: ['feature/*', 'feat/*','fix/*','maintain/*']
 
