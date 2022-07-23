@@ -13,7 +13,8 @@
     {"name": "size/XL", "color":"fafad2", "description": "PR that changes 201-800 lines"},
     {"name": "size/XXL", "color":"008b8b", "description": "PR that changes 801-2000 lines"},
     {"name": "maintenance", "color":"eee8aa", "description": "Indicates this PR contains maintenance code"},
-    {"name": "feature", "color":"800080", "description": "Indicates this PR contains feature code"}
+    {"name": "feature", "color":"800080", "description": "Indicates this PR contains feature code"},
+    {"name": "lgtm", "color":"adff2f", "description": "Indicates this PR looks good to be merged"}
     
     
     
