@@ -4,7 +4,18 @@
     {"name": "fix", "color":"00008b", "description": "Indicates fixes in a job"},
     {"name": "In progress", "color":"ffff00", "description": "Job in progress"},
     {"name": "approved", "color":"008000", "description": "PR is approved"},
-    {"name": "hold", "color":"ff0000", "description": "PR on hold. Not to Merge"}
+    {"name": "hold", "color":"ff0000", "description": "PR on hold. Not to Merge"},
+    {"name": "hold", "color":"ff0000", "description": "PR on hold. Not to Merge"},
+    {"name": "size/XS", "color":"ffb6c1", "description": "PR that changes 0-9 lines"},
+    {"name": "size/S", "color":"90ee90", "description": "PR that changes 10-20 lines"},
+    {"name": "size/M", "color":"20b2aa", "description": "PR that changes 21-50 lines"},
+    {"name": "size/L", "color":"ff8c00", "description": "PR that changes 51-200 lines"},
+    {"name": "size/XL", "color":"fafad2", "description": "PR that changes 201-800 lines"},
+    {"name": "size/XXL", "color":"008b8b", "description": "PR that changes 801-2000 lines"},
+    
+    
+    
+   
     
     
 ]
