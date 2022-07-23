@@ -1,6 +1,6 @@
 [
 
-    {"name": "dependencies", "color":"f000ff", "description": "Indicates change in dependency"},
+    {"name": "dependencies", "color":"f000ff", "description": "Indicates change in dependency for the PR"},
     {"name": "fix", "color":"00008b", "description": "Indicates fixes in a job"},
     {"name": "In progress", "color":"ffff00", "description": "Job in progress"},
     {"name": "approved", "color":"008000", "description": "PR is approved"},
@@ -12,6 +12,10 @@
     {"name": "size/L", "color":"ff8c00", "description": "PR that changes 51-200 lines"},
     {"name": "size/XL", "color":"fafad2", "description": "PR that changes 201-800 lines"},
     {"name": "size/XXL", "color":"008b8b", "description": "PR that changes 801-2000 lines"},
+    {"name": "maintenance", "color":"eee8aa", "description": "Indicates this PR contains maintenance code"},
+    {"name": "feature", "color":"800080", "description": "Indicates this PR contains feature code"}
+    
+    
     
     
     
