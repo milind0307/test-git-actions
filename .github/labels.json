@@ -1,9 +1,10 @@
 [
 
     {"name": "dependencies", "color":"f000ff", "description": "This was created by label job"},
-    {"name": "fix", "color":"4078c0", "description": "Indicates fixes in a job"},
-    {"name": "In progress", "color":"6cc644", "description": "Job in progress"},
-    {"name": "approved", "color":"6e5494", "description": "PR is approved"}
+    {"name": "fix", "color":"00008b", "description": "Indicates fixes in a job"},
+    {"name": "In progress", "color":"ffff00", "description": "Job in progress"},
+    {"name": "approved", "color":"008000", "description": "PR is approved"},
+     {"name": "hold", "color":"ff0000", "description": "PR on hold. Not to Merge"}
     
     
 ]
