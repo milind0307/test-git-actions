@@ -2,7 +2,7 @@ name: automerge
 # on:
 #   schedule:
 #   - cron: "*/5 * * * *"
-# on:
+on:
 #   pull_request:
 #    types:
 #       - labeled
