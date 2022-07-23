@@ -11,4 +11,4 @@ jobs:
         APPROVALS: "1"
         GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
         ADD_LABEL: "approved"
-        REMOVE_LABEL: "Review%20Requested"
+        REMOVE_LABEL: "In%20progress"
