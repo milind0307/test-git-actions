@@ -12,4 +12,4 @@ jobs:
         REQUIRED_LABELS_ANY: "feature,fix,maintenance"
         REQUIRED_LABELS_ANY_DESCRIPTION: "Select at least one label ['feature','fix','maintenance']"
         BANNED_LABELS: "hold"
-        BANNED_LABELS_DESCRIPTION:"Cannot merge a pr when hold label is present"
+        BANNED_LABELS_DESCRIPTION: "Cannot merge a pr when hold label is present"
