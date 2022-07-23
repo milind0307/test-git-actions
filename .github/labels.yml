@@ -4,5 +4,5 @@ area:
   - 'important'
 
 
-tests:
-  - '**/*.test.ts'
+In Progress:
+  - '**/*'
