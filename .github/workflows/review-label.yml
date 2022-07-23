@@ -1,0 +1,16 @@
+name: Add review label
+on:
+  pull_request:
+    types:
+      - review_requested
+jobs:
+  remove_label:
+    runs-on: ubuntu-latest
+    name: add label
+    steps:
+      - name: add label
+        uses: buildsville/add-remove-label@v1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          label: Review Requested
+          type: add
