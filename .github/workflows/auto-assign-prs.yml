@@ -1,4 +1,4 @@
-##
+####
 name: "Auto Assign Author"
 
 # pull_request_target means that this will run on pull requests, but in
